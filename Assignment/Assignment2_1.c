@@ -57,7 +57,7 @@ int search(int a[20], int n)
 int main()
 {
     int n;
-    n = 5;
+    n = 20;
     int action;
     int a[20];
     printf("\n Enter the numbers in array: ");

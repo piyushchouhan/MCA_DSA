@@ -15,7 +15,7 @@ int main()
     printf("what is the column of second matrix: \n");
     scanf("%d", &col2);
 
-    int a[row1][col1], b[row2][col2], nul[row1][col2];
+    int a[row1][col1], b[row2][col2], multiply[row1][col2];
 
     // Taking the values in first matrix a //
     printf("Enter elements of first matrix:\n");
@@ -46,7 +46,7 @@ int main()
         {
             for (j = 0; j < col1; j++)
             {
-                nul[i][j] = 0;
+                multiply[i][j] = 0;
                 for (k = 0; k < row1; k++)
                 {
                     nul[i][j] = nul[i][j] + a[i][k] * b[j][k];
@@ -59,13 +59,13 @@ int main()
         printf("We can't multiply :) ");
     }
 
-    // printing multiplied matrix
+    // printing multiplied matrix-------------------
     printf("Multiplied matrix is:\n");
     for(i=0;i< row1;i++)
     {
         for(j=0;j< col2;j++)
         {
-            printf("%f\t", nul[i][j]);
+            printf("%f\t", multiply[i][j]);
             }
             printf("\n");
     }
