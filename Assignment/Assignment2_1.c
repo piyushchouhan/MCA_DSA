@@ -8,9 +8,9 @@ int search(int a[20],int n);
 int insert(int a[20], int n)
 {
     int index,key;
-    printf("At which place you want to insert your element: ");
+    printf("At which place you want to insert your element:\n ");
     scanf("%d", &index);
-    printf("And the value of that element in intergers: ");
+    printf("And the value of that element in intergers:\n ");
     scanf("%d", &key);
 
     for(int i = n-1 ; i >= index; i--)
@@ -24,11 +24,35 @@ int insert(int a[20], int n)
     printf("\n");
 }
 
+int delete(int a[20], int n){
+    int index;
+    printf("At which place you want to delete your element:\n ");
+    scanf("%d", &index);
+    for(int i = index ; i <= n; i++)
+    {
+        a[i] = a[i+1];
+    }
+    for (int i = 0; i < n-1; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+}
 
-
-
-
-
+int search(int a[20],int n)
+{
+    int key;
+     printf("which element you want to search: \n");
+    scanf("%d", &key);
+    for(int i = 0; i < n; i++)
+    {
+        if(a[i] == key)
+        {
+            printf("The index of the your element is %d \n", i+1);
+            return 1;
+        }
+        
+    }
+    printf("element not found");
+}
 
 int main()
 {
@@ -62,9 +86,9 @@ int main()
     case 2:
         delete(a,n);
         break;
-    // case 3:
-    //     search(a,n);
-    //     break;
+    case 3:
+        search(a,n);
+        break;
     }
      
     return 0;
