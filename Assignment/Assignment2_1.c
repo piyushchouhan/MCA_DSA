@@ -89,6 +89,9 @@ int main()
     case 3:
         search(a,n);
         break;
+    default :
+        printf("INVALID INPUT");
+        break;
     }
      
     return 0;
