@@ -24,7 +24,7 @@ int main()
         for (j = 0; j < col1; j++)
         {
             printf("a[%d][%d]=", i, j);
-            scanf("%f", &a[i][j]);
+            scanf("%d", &a[i][j]);
         }
     }
 
@@ -35,7 +35,7 @@ int main()
         for (j = 0; j < col2; j++)
         {
             printf("b[%d][%d]=", i, j);
-            scanf("%f", &b[i][j]);
+            scanf("%d", &b[i][j]);
         }
     }
     if (row1 == row2 && col1 == col2)
@@ -60,7 +60,7 @@ int main()
     {
         for (j = 0; j < col1; j++)
         {
-            printf("%f\t", subtract[i][j]);
+            printf("%d\t", subtract[i][j]);
         }
         printf("\n");
     }

@@ -24,7 +24,7 @@ int main()
         for (j = 0; j < col1; j++)
         {
             printf("a[%d][%d]=", i, j);
-            scanf("%f", &a[i][j]);
+            scanf("%d", &a[i][j]);
         }
     }
 
@@ -35,7 +35,7 @@ int main()
         for (j = 0; j < col2; j++)
         {
             printf("b[%d][%d]=", i, j);
-            scanf("%f", &b[i][j]);
+            scanf("%d", &b[i][j]);
         }
     }
 
@@ -44,12 +44,12 @@ int main()
         // Multiplication of both matirces-----------
         for (i = 0; i < row1; i++)
         {
-            for (j = 0; j < col1; j++)
+            for (j = 0; j < col2; j++)
             {
                 multiply[i][j] = 0;
                 for (k = 0; k < row1; k++)
                 {
-                    nul[i][j] = nul[i][j] + a[i][k] * b[j][k];
+                    multiply[i][j] = multiply[i][j] + a[i][k] * b[k][j];
                 }
             }
         }
@@ -65,7 +65,7 @@ int main()
     {
         for(j=0;j< col2;j++)
         {
-            printf("%f\t", multiply[i][j]);
+            printf("%d\t", multiply[i][j]);
             }
             printf("\n");
     }
