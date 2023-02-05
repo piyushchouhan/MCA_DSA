@@ -55,7 +55,7 @@ int main()
     }
 
     // printing subtracted matrix
-    printf("Added matrix is:\n");
+    printf("subtracted matrix is:\n");
     for (i = 0; i < row1; i++)
     {
         for (j = 0; j < col1; j++)
