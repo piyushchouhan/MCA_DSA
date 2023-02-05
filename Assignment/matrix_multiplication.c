@@ -27,6 +27,14 @@ int main()
             scanf("%d", &a[i][j]);
         }
     }
+    for (i = 0; i < row1; i++)
+    {
+        for (j = 0; j < col1; j++)
+        {
+            printf("%d\t", a[i][j]);
+        }
+        printf("\n");
+    }
 
     // Taking the values in second matrix b //
     printf("Enter elements of second matrix:\n");
