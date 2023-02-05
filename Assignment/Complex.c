@@ -13,6 +13,7 @@ int main()
     scanf("%d", &colm);
     int a[rows][colm],b[rows][colm],c[rows][colm],d[rows][colm], p[rows][colm], q[rows][colm], r[rows][colm], s[rows][colm], U[rows][colm], V[rows][colm];
 if(rows == colm){
+    
     printf("Matrix a\n");
     for (i = 0; i < rows; i++)
     {
@@ -97,6 +98,8 @@ if(rows == colm){
             printf("%d + %di\t", U[i][j], V[i][j]);
         printf("\n");
     }
+    printf("Number of multiplications: %d\n", 4*(rows * colm * colm));
+    printf("Number of additions: %d\n", 4*(rows* colm * ( colm - 1)));
 }
 else{
     printf("Rows should be equal to column:) \n");
