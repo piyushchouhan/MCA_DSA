@@ -53,7 +53,7 @@ if(rows == colm){
         }
     }
 
-
+    // performing a*c, b*d, a*d, b*c
     for(i=0;i<rows;i++)
     {
         for(j=0;j<colm;j++)
@@ -72,24 +72,25 @@ if(rows == colm){
         }
     }
 
+    // Performing the calculation of (ac-bd)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < colm; j++)
         {
             U[i][j] = p[i][j] - q[i][j];
         }
-        printf("\n");
     }
 
+    // Performing the calculation of (ad+bc)
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < colm; j++)
         {
             V[i][j] = r[i][j] + s[i][j];
         }
-        printf("\n");
     }
 
+    // printing the whole new multiplied matrix
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < colm; j++)
