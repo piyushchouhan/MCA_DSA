@@ -33,29 +33,24 @@ if(rows == colm){
         }
     }
 
+     printf("Matrix c\n");
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < colm; j++)
         {
-            printf("%d\t", b[i][j]);
+            printf("c[%d][%d]=", i, j);
+            scanf("%d", &c[i][j]);
         }
-        printf("\n");
     }
+
+     printf("Matrix d\n");
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < colm; j++)
         {
-            printf("%d\t", c[i][j]);
+            printf("d[%d][%d]=", i, j);
+            scanf("%d", &d[i][j]);
         }
-        printf("\n");
-    }
-    for (i = 0; i < rows; i++)
-    {
-        for (j = 0; j < colm; j++)
-        {
-            printf("%d\t", d[i][j]);
-        }
-        printf("\n");
     }
 
 
@@ -77,29 +72,30 @@ if(rows == colm){
         }
     }
 
-    printf("(AC-BD):\n");
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < colm; j++)
         {
-            printf("U[%d][%d] = %d\t", i, j, p[i][j] - q[i][j]);
+            U[i][j] = p[i][j] - q[i][j];
         }
         printf("\n");
     }
 
-    printf("(AD+BC)i:\n");
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < colm; j++)
         {
-            printf("V[%d][%d] = %di\t", i, j, r[i][j] + s[i][j]);
+            V[i][j] = r[i][j] + s[i][j];
         }
         printf("\n");
     }
 
-
-
-    
+    for (i = 0; i < rows; i++)
+    {
+        for (j = 0; j < colm; j++)
+            printf("%d + %di\t", U[i][j], V[i][j]);
+        printf("\n");
+    }
 }
 else{
     printf("Rows should be equal to column:) \n");
