@@ -33,7 +33,7 @@ if(rows == colm){
         }
     }
 
-     printf("Matrix c\n");
+    printf("Matrix c\n");
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < colm; j++)
@@ -43,7 +43,7 @@ if(rows == colm){
         }
     }
 
-     printf("Matrix d\n");
+    printf("Matrix d\n");
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < colm; j++)
