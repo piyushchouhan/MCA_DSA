@@ -1,4 +1,4 @@
-// subtraction of matrix
+// multiplication of matrix
 #include <stdio.h>
 #include <math.h>
 
@@ -55,7 +55,7 @@ int main()
             for (j = 0; j < col2; j++)
             {
                 multiply[i][j] = 0;
-                for (k = 0; k < row1; k++)
+                for (k = 0; k < row2; k++)
                 {
                     multiply[i][j] = multiply[i][j] + a[i][k] * b[k][j];
                 }
