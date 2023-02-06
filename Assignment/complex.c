@@ -23,11 +23,7 @@ int main()
     scanf("%d", &rows);
     printf("How many columns in matrices: ");
     scanf("%d", &colm);
-    int  p[rows][colm], q[rows][colm], r[rows][colm], s[rows][colm], U[rows][colm], V[rows][colm];
-    int Matrix_A[rows][colm];
-    int Matrix_B[rows][colm];
-    int Matrix_C[rows][colm];
-    int Matrix_D[rows][colm];
+    int  Matrix_D[rows][colm],  Matrix_C[rows][colm],  Matrix_A[rows][colm], p[rows][colm], Matrix_B[rows][colm],q[rows][colm], r[rows][colm], s[rows][colm], U[rows][colm], V[rows][colm];
     printf("Matrix A\n");
     user_input(rows, colm, Matrix_A);
     printf("Matrix B\n");
@@ -41,10 +37,7 @@ int main()
     {
     for(j=0;j<colm;j++)
     {
-    p[i][j]=0;
-    q[i][j]=0;
-    r[i][j]=0;
-    s[i][j]=0;
+    p[i][j]=0,q[i][j]=0,r[i][j]=0,s[i][j]=0;
     for(k=0;k<rows;k++)
         {
             p[i][j]=p[i][j]+Matrix_A[i][k]*Matrix_C[k][j];
