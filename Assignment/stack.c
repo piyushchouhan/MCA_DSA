@@ -1,4 +1,5 @@
-#include<stdio.h>
+// implementation using C ( .c file ) to performing the following operations on a stack of size n
+#include <stdio.h>
 
 #define MAX_SIZE 100
 
@@ -49,34 +50,34 @@ int main()
         printf("3. Display\n");
         printf("4. Exit\n");
         scanf("%d", &choice);
-       
-        switch(choice)
+
+        switch (choice)
         {
-            case 1:
-                printf("Enter number of elements to push: ");
-                scanf("%d", &k);
-                for (int i = 0; i < k; i++)
-                {
-                    printf("Enter item: ");
-                    scanf("%d", &item);
-                    push(item);
-                }
-                break;
+        case 1:
+            printf("Enter number of elements to push: ");
+            scanf("%d", &k);
+            for (int i = 0; i < k; i++)
+            {
+                printf("Enter item: ");
+                scanf("%d", &item);
+                push(item);
+            }
+            break;
 
-            case 2:
-                pop();
-                break;
+        case 2:
+            pop();
+            break;
 
-            case 3:
-                display();
-                break;
+        case 3:
+            display();
+            break;
 
-            case 4:
-                return 0;
-                
-            default:
-                printf("Invalid choice\n");
-                break;
+        case 4:
+            return 0;
+
+        default:
+            printf("Invalid choice\n");
+            break;
         }
     }
     return 0;

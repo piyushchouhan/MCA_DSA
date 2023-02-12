@@ -1,4 +1,5 @@
-#include<stdio.h>
+//implementation using C ( .c file ) to performing the following operations on a non-circular queue of size n 
+#include <stdio.h>
 
 #define MAX_SIZE 100
 
@@ -8,13 +9,13 @@ int rear = -1;
 
 void enqueue(int n, int x)
 {
-    if(rear == n-1)
+    if (rear == n - 1)
     {
         printf("Queue is full\n");
     }
     else
     {
-        if(front == -1)
+        if (front == -1)
         {
             front = 0;
         }
@@ -27,7 +28,7 @@ void enqueue(int n, int x)
 void dequeue(int n)
 {
     int x;
-    if(front == -1 || front > rear)
+    if (front == -1 || front > rear)
     {
         printf("Queue is empty\n");
     }
@@ -42,14 +43,14 @@ void dequeue(int n)
 void display(int n)
 {
     int i;
-    if(front == -1 || front > rear)
+    if (front == -1 || front > rear)
     {
         printf("Queue is empty\n");
     }
     else
     {
         printf("Queue is: ");
-        for(i = front; i <= rear; i++)
+        for (i = front; i <= rear; i++)
         {
             printf("%d ", queue[i]);
         }
@@ -62,7 +63,7 @@ int main()
     int n, choice, x;
     printf("Enter the size of the queue: ");
     scanf("%d", &n);
-    while(1)
+    while (1)
     {
         printf("\nEnter your choice:\n");
         printf("1. Insert\n");
@@ -70,24 +71,24 @@ int main()
         printf("3. Display\n");
         printf("4. Exit\n");
         scanf("%d", &choice);
-        switch(choice)
+        switch (choice)
         {
-            case 1:
-                printf("Enter the element to be inserted: ");
-                scanf("%d", &x);
-                enqueue(n, x);
-                break;
-            case 2:
-                dequeue(n);
-                break;
-            case 3:
-                display(n);
-                break;
-            case 4:
-                return 0;
-            default:
-                printf("Invalid choice\n");
-                break;
+        case 1:
+            printf("Enter the element to be inserted: ");
+            scanf("%d", &x);
+            enqueue(n, x);
+            break;
+        case 2:
+            dequeue(n);
+            break;
+        case 3:
+            display(n);
+            break;
+        case 4:
+            return 0;
+        default:
+            printf("Invalid choice\n");
+            break;
         }
     }
     return 0;

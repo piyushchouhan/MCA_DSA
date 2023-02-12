@@ -1,3 +1,4 @@
+//implementation using C ( .c file ) to performing the following operations on a circular queue of size n 
 #include <stdio.h>
 
 #define MAX_SIZE 10
@@ -105,26 +106,26 @@ int main()
 
         switch (choice)
         {
-            case 1:
-                printf("Enter the element to be inserted: ");
-                scanf("%d", &element);
-                insert(element);
-                break;
+        case 1:
+            printf("Enter the element to be inserted: ");
+            scanf("%d", &element);
+            insert(element);
+            break;
 
-            case 2:
-                delete();
-                break;
+        case 2:
+            delete ();
+            break;
 
-            case 3:
-                display();
-                break;
+        case 3:
+            display();
+            break;
 
-            case 4:
-                return 0;
+        case 4:
+            return 0;
 
-            default:
-                printf("Invalid choice\n");
-                break;
+        default:
+            printf("Invalid choice\n");
+            break;
         }
     }
 
