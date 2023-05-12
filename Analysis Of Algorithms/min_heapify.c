@@ -2,8 +2,8 @@
 
 void min_heapify(int arr[], int n, int i){
     int smallest = i;
-    int left = 2*i + 1;
-    int right = 2*i + 1;
+    int left = 2*i +1 ;
+    int right = 2*i + 2;
 
     if(left < n && arr[left] < arr[smallest] ){
         smallest = left;
@@ -21,7 +21,7 @@ void min_heapify(int arr[], int n, int i){
 }
 
 int main() {
-    int arr[] = {8,5,7,4,3,1,2};
+    int arr[] = {30,20,6,19,16,13,4,8,10,15,7,11,12,3};
     int n = sizeof(arr)/sizeof(arr[0]);
  
     printf("Original array: ");
@@ -29,7 +29,7 @@ int main() {
         printf("%d ", arr[i]);
     printf("\n");
  
-    min_heapify(arr, n, 0);
+    min_heapify(arr, n, 2);
  
     printf("Heapified array: ");
     for (int i = 0; i < n; i++)
