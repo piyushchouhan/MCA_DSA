@@ -45,7 +45,7 @@ def simulated_annealing(n, initial_temperature, cooling_factor, iteration_limit)
 def print_solution(board):
     n = len(board)
     for row in board:
-        print("".join("Q" if col == row else "." for col in range(n)))
+        print("".join(" Q " if col == row else " . " for col in range(n)))
 
 if __name__ == "__main__":
     n = int(input("Tell the no. of Queen: "))
