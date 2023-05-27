@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 //Insertion Sort
-void insertionSort(int arr[], int size){
+void insertionSort(float arr[], int size){
     for(int i = 1; i < size; i++){
-        int key = arr[i];
+        float key = arr[i];
         int j = i - 1;
 
         while(j >= 0 && arr[j] > key){
@@ -15,18 +15,18 @@ void insertionSort(int arr[], int size){
     }
 }
 
-void bucketSort(int Arr[], int n){
-    int max = Arr[0];
+void bucketSort(float Arr[], int n){
+    float max = Arr[0];
     for(int i =0 ; i < n; i++){
         if(Arr[i] > max){
             max = Arr[i];
         }
     }
 
-    int num_buckets = max+1;
-    int** B = (int**)malloc(num_buckets * sizeof(int*));
+    int num_buckets = (int)max+1;
+    float** B = (float**)malloc(num_buckets * sizeof(float*));
     for (int i = 0; i < num_buckets; i++) 
-        B[i] = (int*)malloc(n * sizeof(int));
+        B[i] = (float*)malloc(n * sizeof(float));
     
     int* B_count = (int *)malloc(num_buckets * sizeof(int));
     for (int i = 0; i < num_buckets; i++) {
@@ -34,7 +34,7 @@ void bucketSort(int Arr[], int n){
     }
 
     for(int i = 0; i < n; i++){
-        int index = Arr[i];
+        int index = (int)Arr[i];
         B[index][B_count[index]] = Arr[i];
         B_count[index]++;
     }
@@ -51,14 +51,14 @@ void bucketSort(int Arr[], int n){
 }
 
 int main() {
-    int A[] = {4, 2, 2, 8, 3, 3, 1};
+    float A[] = {4.20, 2.35, 2.56, 8.45, 3.98, 3.02, 1.56};
     int n = sizeof(A) / sizeof(A[0]);
 
     bucketSort(A, n);
 
     printf("Sorted array is: ");
     for (int i = 0; i < n; i++) {
-        printf("%d ", A[i]);
+        printf("%.2f ", A[i]);
     }
     printf("\n");
 
