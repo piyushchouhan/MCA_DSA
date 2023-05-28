@@ -18,7 +18,7 @@ int* Count_sort(int arr[], int n, int m){
         exit(1);
     }
 
-    for(int i= 0; i < m; i++){
+    for(int i= 0; i <= m; i++){
         c[i] = 0;
     }
 
@@ -27,7 +27,7 @@ int* Count_sort(int arr[], int n, int m){
     }
     
  // C[i] now contains the number of elements equal to i.
-    for(int i = 1; i< m; i++){
+    for(int i = 1; i<= m; i++){
         c[i] = c[i] + c[i-1]; 
     }
 
@@ -56,7 +56,7 @@ int main(){
 
     // Print the elements of the sorted array
     printf("Sorted array: ");
-    for (int i = 0; i < n-1; i++) {
+    for (int i = 0; i < n; i++) {
         printf("%d ", sorted_arr[i]);
     }
     printf("\n");
