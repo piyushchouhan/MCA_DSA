@@ -1,9 +1,6 @@
+//matrix_chain
 #include <stdio.h>
 #include <limits.h>
-
-
-void matrixChainOrder(int p[], int n, int m[][8], int s[][8]);
-void printOptimalParens(int s[][8], int i, int j);
 
 
 void matrixChainOrder(int p[], int n, int m[][8], int s[][8]) {

@@ -91,13 +91,13 @@ clock = pygame.time.Clock()
 my_car = Car(1000, [80, 40, 20], [0, 0], 0.8, 200, 20)
 my_car.position = [window_width / 2, window_height / 2]  # Set the initial position to the center of the window
 
-other_car1 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 20)
+other_car1 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 40)
 other_car1.position = [random.uniform(0, window_width), random.uniform(0, window_height)] # Set the initial position of the other car1
 
-other_car2 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 20)
+other_car2 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 60)
 other_car2.position = [random.uniform(0, window_width), random.uniform(0, window_height)] # Set the initial position of the other car2
 
-other_car3 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 20)
+other_car3 = Car(1200, [80, 40, 20], [0, 0], 0.8, 200, 30)
 other_car3.position = [random.uniform(0, window_width), random.uniform(0, window_height)] # Set the initial position of the other car2
 
 running = True

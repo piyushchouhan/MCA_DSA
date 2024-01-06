@@ -7,4 +7,4 @@ def TowerOfHanoi(n, source, destination, temp):
     TowerOfHanoi(n-1, temp, destination, source)
 
 # Example usage
-TowerOfHanoi(4, 'A', 'C', 'B')
+TowerOfHanoi(3, 'A', 'C', 'B')

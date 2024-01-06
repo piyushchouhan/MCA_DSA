@@ -1,3 +1,4 @@
+//count_sort
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,7 +11,6 @@ int Find_K(int arr[], int n){
     }
     return k;
 }
-
 int* Count_sort(int arr[], int n, int m){
     int* c = (int*)malloc(m * sizeof(int));
     if (c == NULL) {
@@ -25,12 +25,10 @@ int* Count_sort(int arr[], int n, int m){
     for( int j= 0 ; j<n; j++){
         c[arr[j]] = c[arr[j]] + 1;
     }
-    
  // C[i] now contains the number of elements equal to i.
     for(int i = 1; i<= m; i++){
         c[i] = c[i] + c[i-1]; 
     }
-
 
     int* b = (int*)malloc(n * sizeof(int));
     if (b == NULL) {

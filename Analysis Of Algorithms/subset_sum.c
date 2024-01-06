@@ -6,6 +6,7 @@
 bool isSubsetSum(int set[], int n, int sum,int subset[][10])
 {
 
+
     // If the sum is 0, an empty subset can be found
     for (int i = 0; i <= n; i++)
         subset[i][0] = true;
@@ -13,7 +14,6 @@ bool isSubsetSum(int set[], int n, int sum,int subset[][10])
     // If the sum is not 0 but the set is empty, no subset can be found
     for (int i = 1; i <= sum; i++)
         subset[0][i] = false;
-
 
     // Fill the subset table in a bottom-up manner
     for (int i = 1; i <= n; i++) {

@@ -82,7 +82,6 @@ def get_neighbors(state):
         return []
 
 def heuristic(state):
-    # Define your heuristic function here
     # This function should estimate the cost from the current state to the goal state
     heuristic_costs = {
         "A": 10,
